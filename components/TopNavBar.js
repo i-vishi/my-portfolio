@@ -40,7 +40,7 @@ export default function TopNavBar() {
       <AppBar position="static">
         <Container maxWidth="lg">
           <Toolbar>
-            <IconButton edge="start" color="inherit" className={classes.logo}>
+            <IconButton edge="start" color="secondary" className={classes.logo}>
               <SvgIcon>
                 <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" />
               </SvgIcon>
