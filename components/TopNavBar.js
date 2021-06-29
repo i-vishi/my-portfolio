@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   AppBar,
   Container,
@@ -6,7 +7,7 @@ import {
   makeStyles,
   Toolbar,
   Typography,
-  SvgIcon
+  SvgIcon,
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -14,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   logo: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(4),
   },
   title: {
     flexGrow: 1,
@@ -30,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
   },
+  toolbarStyle: {
+    minHeight: "80px",
+  }
 }));
 
 export default function TopNavBar() {
@@ -39,14 +43,19 @@ export default function TopNavBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Container maxWidth="lg">
-          <Toolbar>
+          <Toolbar className={classes.toolbarStyle}>
             <IconButton edge="start" color="secondary" className={classes.logo}>
-              <SvgIcon>
-                <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" />
-              </SvgIcon>
+              <Image
+                src="/logo-vg.png"
+                alt="Vercel Logo"
+                width={40}
+                height={40}
+              />
             </IconButton>
 
-            <Typography variant="h5" className={classes.title}>Vishal Gaur</Typography>
+            <Typography variant="h5" className={classes.title}>
+              Vishal Gaur
+            </Typography>
             <div className={classes.navLinks}>
               <Typography className={classes.navLink}>About</Typography>
 

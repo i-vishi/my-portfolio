@@ -16,6 +16,9 @@ const theme = createMuiTheme({
     background: {
       default: "#002438",
     },
+    text: {
+      primary: "#ffffff",
+    },
   },
   spacing: 6,
 });
