@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { Box, Container, CssBaseline } from "@material-ui/core";
-import '../styles/globals.css'
 import theme from "../components/theme";
 import TopNavBar from "../components/TopNavBar";
 function MyApp({ Component, pageProps }) {

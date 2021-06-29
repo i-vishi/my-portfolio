@@ -21,6 +21,11 @@ const theme = createMuiTheme({
     },
   },
   spacing: 6,
+  typography: {
+    htmlFontSize: 18,
+    fontSize: 16,
+    fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+  },
 });
 
 export default theme;
