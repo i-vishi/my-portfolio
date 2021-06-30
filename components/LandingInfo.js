@@ -1,9 +1,7 @@
 import {
   Container,
-  Grid,
   Typography,
   makeStyles,
-  Avatar,
   Box,
   Button,
 } from "@material-ui/core";
@@ -19,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.25em",
   },
   topDetailPara: {
-    width: "50%"
-  }
+    width: "50%",
+  },
 }));
 
 export default function LandingInfo() {
@@ -33,11 +31,11 @@ export default function LandingInfo() {
         <Typography variant="h1">Vishal Gaur.</Typography>
         <Typography variant="h2">I build web apps and android apps.</Typography>
         <p className={classes.topDetailPara}>
-        <Typography variant="h6">
-          I am a Software Engineer specialized in Web Development and Android
-          Development with Kotlin. Currently, I am SDE at Paytm(One97
-          Communications Ltd.) working with their Android Team.
-        </Typography>
+          <Typography variant="h6">
+            I am a Software Engineer specialized in Web Development and Android
+            Development with Kotlin. Currently, I am SDE at Paytm(One97
+            Communications Ltd.) working with their Android Team.
+          </Typography>
         </p>
         <Button
           variant="outlined"
@@ -47,15 +45,6 @@ export default function LandingInfo() {
           Get In Touch
         </Button>
       </Box>
-      {/* <Grid item xs={12} lg={4}>
-          <Box display="flex" justifyContent="flex-end" alignItems="center" className={classes.imageGrid}>
-            <Avatar
-              alt="Vishal Gaur"
-              src="https://github.com/i-vishi.png?size=500"
-              className={classes.myImage}
-            />
-          </Box>
-        </Grid> */}
     </Container>
   );
 }

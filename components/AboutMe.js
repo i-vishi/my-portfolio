@@ -33,8 +33,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   myImage: {
-    minHeight: theme.spacing(64),
-    minWidth: theme.spacing(64),
+    minHeight: theme.spacing(48),
+    minWidth: theme.spacing(48),
   },
   imageGrid: {
     height: "100%",
@@ -48,7 +48,7 @@ export default function About() {
     <Container className={classes.container}>
       <ComponentHeading title="About Me" />
       <Grid container className={classes.aboutGrids}>
-        <Grid item lg={6} xs={12} className={classes.aboutText}>
+        <Grid item lg={7} xs={12} className={classes.aboutText}>
           <Typography variant="body1">
             Hello! My name is Vishal Gaur and I like to build things that run on
             Android and things that live on the internet. I started Web
@@ -84,7 +84,7 @@ export default function About() {
             </Grid>
           </Typography>
         </Grid>
-        <Grid item lg={6} xs={12} className={classes.aboutImage}>
+        <Grid item lg={5} xs={12} className={classes.aboutImage}>
           <Box
             display="flex"
             justifyContent="flex-end"
