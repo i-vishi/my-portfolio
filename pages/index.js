@@ -1,5 +1,6 @@
 import Head from "next/head";
 import AboutMe from "../components/AboutMe";
+import Experience from "../components/Experience";
 import LandingInfo from "../components/LandingInfo";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
 
       <LandingInfo />
       <AboutMe />
+      <Experience />
     </div>
   );
 }

@@ -66,7 +66,7 @@ export default function About() {
             Some technologies I've worked with:
             <Grid container>
               <Grid item xs={6}>
-                <ul class="a">
+                <ul>
                   <li>JavaScipt</li>
                   <li>Node.js</li>
                   <li>Vue.js</li>
@@ -74,7 +74,7 @@ export default function About() {
                 </ul>
               </Grid>
               <Grid item xs={6}>
-                <ul class="a">
+                <ul>
                   <li>Next.js</li>
                   <li>Android</li>
                   <li>Kotlin</li>
