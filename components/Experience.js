@@ -21,26 +21,35 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: theme.spacing(2),
   },
   compTab: {
-    padding: theme.spacing(5.5),
+    padding: theme.spacing(4),
     backgroundColor: theme.palette.primary.main,
     border: "0",
-    fontSize: "1.15em",
+    fontSize: "1.25em",
     borderLeft: "3px solid #3d3d3d55",
     "&:hover": {
       backgroundColor: "#00344899",
     },
   },
   selectedTab: {
-    padding: theme.spacing(6),
+    padding: theme.spacing(4),
     backgroundColor: "#00344899",
+    color: "#00e5ff",
     border: "0",
     fontSize: "1.25em",
+    fontWeight: "600",
     borderLeft: "3px solid #00e5ff",
   },
   compDescription: {
     paddingLeft: theme.spacing(4),
     margin: theme.spacing(1),
     minHeight: theme.spacing(48),
+  },
+  descCompany: {
+    color: "#00e5ff",
+  },
+  descCompLink: {
+    color: "#00e5ff",
+    textDecoration: "none",
   },
 }));
 
@@ -64,7 +73,7 @@ export default function Experience() {
       name: "Paytm",
       id: "paytm-1",
       position: "SDE Intern (Android)",
-      url: "https://paytm.co",
+      url: "https://paytm.com",
       timePeriod: "January 2021 - June 2021",
       description: [
         "Worked as an Intern in Android Team",
@@ -73,7 +82,7 @@ export default function Experience() {
       ],
     },
     {
-      name: " MathWorks",
+      name: "MathWorks",
       id: "mathworks-1",
       position: "Intern - EDG",
       url: "https://mathworks.com",
@@ -118,7 +127,13 @@ export default function Experience() {
         <Grid item xs={9}>
           <Box p={1} m={1} className={classes.compDescription}>
             <Typography variant="h5">
-              {selectedJob.position} @ {selectedJob.name}
+              {selectedJob.position}
+              <span className={classes.descCompany}>
+                &nbsp;@&nbsp;
+                <a href={selectedJob.url} className={classes.descCompLink}>
+                  {selectedJob.name}
+                </a>
+              </span>
             </Typography>
             <Typography variant="body1">{selectedJob.timePeriod}</Typography>
             <Typography variant="h6">

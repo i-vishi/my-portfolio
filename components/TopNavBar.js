@@ -51,7 +51,7 @@ export default function TopNavBar() {
             <IconButton edge="start" color="secondary" className={classes.logo}>
               <Image
                 src="/logo-vg.png"
-                alt="Vercel Logo"
+                alt="Vishal Gaur"
                 width={40}
                 height={40}
               />
