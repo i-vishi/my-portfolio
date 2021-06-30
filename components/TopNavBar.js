@@ -7,7 +7,7 @@ import {
   makeStyles,
   Toolbar,
   Typography,
-  SvgIcon,
+  Button,
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -33,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarStyle: {
     minHeight: "80px",
+    backgroundColor: "#00243855"
+  },
+  resumeBtn: {
+    marginLeft: theme.spacing(8),
   }
 }));
 
@@ -63,6 +67,9 @@ export default function TopNavBar() {
 
               <Typography className={classes.navLink}>Contact</Typography>
             </div>
+            <Button variant="outlined" color="secondary" className={classes.resumeBtn}>
+              Resume
+            </Button>
           </Toolbar>
         </Container>
       </AppBar>

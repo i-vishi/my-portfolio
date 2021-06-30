@@ -3,7 +3,6 @@ import {
   Grid,
   Typography,
   makeStyles,
-  Avatar,
   Box,
   Paper,
 } from "@material-ui/core";
@@ -12,33 +11,36 @@ import ComponentHeading from "./ComponentHeading";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    paddingTop: theme.spacing(24),
+    paddingTop: theme.spacing(32),
     paddingLeft: theme.spacing(40),
     paddingRight: theme.spacing(12),
   },
   expGrids: {
-    paddingTop: theme.spacing(6),
+    paddingTop: theme.spacing(8),
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
   },
   compTab: {
-    padding: theme.spacing(4),
+    padding: theme.spacing(5.5),
     backgroundColor: theme.palette.primary.main,
     border: "0",
+    fontSize: "1.15em",
     borderLeft: "3px solid #3d3d3d55",
     "&:hover": {
       backgroundColor: "#00344899",
     },
   },
   selectedTab: {
-    padding: theme.spacing(4),
+    padding: theme.spacing(6),
     backgroundColor: "#00344899",
     border: "0",
+    fontSize: "1.25em",
     borderLeft: "3px solid #00e5ff",
   },
   compDescription: {
     paddingLeft: theme.spacing(4),
     margin: theme.spacing(1),
+    minHeight: theme.spacing(48),
   },
 }));
 
@@ -46,18 +48,18 @@ export default function Experience() {
   const classes = useStyles();
 
   const data = [
-    {
-      name: "Paytm",
-      id: "paytm-2",
-      position: "Software Engineer - Android",
-      url: "https://paytm.com",
-      timePeriod: "July 2021 - Present",
-      description: [
-        "Working as Android Developer",
-        "Some more points",
-        "Some more points",
-      ],
-    },
+    // {
+    //   name: "Paytm",
+    //   id: "paytm-2",
+    //   position: "Software Engineer - Android",
+    //   url: "https://paytm.com",
+    //   timePeriod: "July 2021 - Present",
+    //   description: [
+    //     "Working as Android Developer",
+    //     "Some more points",
+    //     "Some more points",
+    //   ],
+    // },
     {
       name: "Paytm",
       id: "paytm-1",
@@ -77,8 +79,8 @@ export default function Experience() {
       url: "https://mathworks.com",
       timePeriod: "May 2020 - July 2020",
       description: [
-        "Implemented a Simulink Model Randomizer for PLC Controller.",
-        "Refactored the code and made it efficient.",
+        "Implemented a Simulink Model Randomizer for PLC Controller and learned Ladder Logic for the task.",
+        "Refactored the code to follow Object-Oriented Design and made it efficient.",
         "Learned MATLAB and Simulink to build the project.",
       ],
     },
@@ -88,7 +90,7 @@ export default function Experience() {
 
   return (
     <Container className={classes.container}>
-      <ComponentHeading title="My Experience" />
+      <ComponentHeading title="Places I've worked at" />
       <Grid container className={classes.expGrids}>
         <Grid item xs={3} container direction="column">
           {data &&

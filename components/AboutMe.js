@@ -11,12 +11,12 @@ import ComponentHeading from "./ComponentHeading";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    paddingTop: theme.spacing(24),
+    paddingTop: theme.spacing(32),
     paddingLeft: theme.spacing(12),
     paddingRight: theme.spacing(36),
   },
   aboutGrids: {
-    paddingTop: theme.spacing(6),
+    paddingTop: theme.spacing(8),
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
   },

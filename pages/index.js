@@ -2,6 +2,7 @@ import Head from "next/head";
 import AboutMe from "../components/AboutMe";
 import Experience from "../components/Experience";
 import LandingInfo from "../components/LandingInfo";
+import Projects from "../components/Projects";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <LandingInfo />
       <AboutMe />
       <Experience />
+      <Projects />
     </div>
   );
 }
