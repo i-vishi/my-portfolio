@@ -1,5 +1,6 @@
 import Head from "next/head";
-import About from "../components/About";
+import AboutMe from "../components/AboutMe";
+import LandingInfo from "../components/LandingInfo";
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <About />
+      <LandingInfo />
+      <AboutMe />
     </div>
   );
 }
