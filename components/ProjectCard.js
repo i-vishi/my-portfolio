@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   carContent: {
-    height: 320,
+    height: 310,
   },
   projImage: {
     marginTop: theme.spacing(2),
@@ -30,6 +30,10 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     objectFit: "contain",
     position: "relative",
+  },
+  topics: {
+    padding: theme.spacing(3),
+    color: "#ffffff99",
   },
 }));
 
@@ -92,9 +96,9 @@ function ProjectCard(props) {
             <Typography variant="body1">{projDesc} </Typography>
           </CardContent>
         </div>
-        <CardActions>
+        <CardActions className={classes.topics}>
           {projTopics && (
-            <Typography variant="overline">{projTopics.toString()}</Typography>
+            <Typography variant="overline">{projTopics.join(" ")}</Typography>
           )}
         </CardActions>
       </CardActionArea>

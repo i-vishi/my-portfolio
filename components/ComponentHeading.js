@@ -14,7 +14,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     whiteSpace: "nowrap",
     color: theme.palette.secondary.main,
-    fontFamily: "Cinzel"
+  },
+  titleText:{
+    fontFamily: "'Cinzel', serif",
   },
 }));
 
@@ -24,7 +26,7 @@ const ComponentHeading = ({ title }) => {
   return (
     <div className={classes.container}>
       <span className={classes.content}>
-        <Typography variant="h5">
+        <Typography variant="h5"className={classes.titleText}>
           {title}
         </Typography>
       </span>
