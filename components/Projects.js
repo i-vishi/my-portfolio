@@ -22,10 +22,10 @@ export default function Projects() {
   const repoList = [
     { repoName: "shopping-android-app", projName: "Shopping App" },
     { repoName: "ds-algo-web", projName: "DS & Algo Web"},
-    // { repoName: "crowdsourcing-blockchain", projName: "CrowdsourceIt!"},
-    // { repoName: "movie-data-android-app", projName: "Movie Data App"},
-    // { repoName: "csgo-league-admin", projName: "CS:GO League Auction App"},
-    // { repoName: "knowmyprof", projName: "Know My Professor"},
+    { repoName: "crowdsourcing-blockchain", projName: "CrowdsourceIt!"},
+    { repoName: "movie-data-android-app", projName: "Movie Data App"},
+    { repoName: "csgo-league-admin", projName: "CS:GO League Auction App"},
+    { repoName: "knowmyprof", projName: "Know My Professor"},
   ];
 
   return (
