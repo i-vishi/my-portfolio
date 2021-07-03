@@ -98,8 +98,8 @@ export default function Experience() {
   const [selectedJob, setSelectedJob] = useState(data[0]);
 
   return (
-    <Container className={classes.container}>
-      <ComponentHeading title="Places I've worked at" />
+    <Container id="experience" className={classes.container}>
+      <ComponentHeading title="Places I've worked at"/>
       <Grid container className={classes.expGrids}>
         <Grid item xs={3} container direction="column">
           {data &&

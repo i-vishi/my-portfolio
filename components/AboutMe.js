@@ -53,8 +53,8 @@ export default function About() {
   const classes = useStyles();
 
   return (
-    <Container className={classes.container}>
-      <ComponentHeading title="About Me" />
+    <Container id="about" className={classes.container}>
+      <ComponentHeading title="About Me"/>
       <Grid container className={classes.aboutGrids}>
         <Grid item lg={7} xs={12} className={classes.aboutText}>
           <Typography variant="body1">

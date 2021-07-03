@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   AppBar,
   Container,
@@ -26,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navLink: {
     padding: theme.spacing(4, 0, 4, 8),
+    color: "#ffffff",
   },
   navDisplayFlex: {
     display: "flex",
@@ -33,11 +35,11 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarStyle: {
     minHeight: "80px",
-    backgroundColor: "#00243855"
+    backgroundColor: "#00243855",
   },
   resumeBtn: {
     marginLeft: theme.spacing(8),
-  }
+  },
 }));
 
 export default function TopNavBar() {
@@ -61,13 +63,24 @@ export default function TopNavBar() {
               Vishal Gaur
             </Typography>
             <div className={classes.navLinks}>
-              <Typography className={classes.navLink}>About</Typography>
-
-              <Typography className={classes.navLink}>Projects</Typography>
-
-              <Typography className={classes.navLink}>Contact</Typography>
+              <Link href="/#about">
+                <Typography className={classes.navLink}>About</Typography>
+              </Link>
+              <Link href="/#experience">
+                <Typography className={classes.navLink}>Experience</Typography>
+              </Link>
+              <Link href="/#projects">
+                <Typography className={classes.navLink}>Projects</Typography>
+              </Link>
+              <Link href="/#contact">
+                <Typography className={classes.navLink}>Contact</Typography>
+              </Link>
             </div>
-            <Button variant="outlined" color="secondary" className={classes.resumeBtn}>
+            <Button
+              variant="outlined"
+              color="secondary"
+              className={classes.resumeBtn}
+            >
               Resume
             </Button>
           </Toolbar>
