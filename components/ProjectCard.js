@@ -1,25 +1,40 @@
 import {
   Card,
   CardActionArea,
+  CardActions,
   CardContent,
+  CardMedia,
   makeStyles,
   Typography,
 } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { Octokit } from "@octokit/rest";
+import Image from "next/image";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 350,
+    width: 350,
     backgroundColor: "#00344899",
+    height: 380,
+    "&:hover": {
+      backgroundColor: "#00546899",
+    },
+  },
+  carContent: {
+    height: 320,
   },
   projImage: {
-    height: 150,
+    marginTop: theme.spacing(2),
+    height: 200,
+    maxWidth: "90%",
+    margin: "auto",
+    objectFit: "contain",
+    position: "relative",
   },
 }));
 
 function ProjectCard(props) {
-  const { repoName, projName } = props;
+  const { repoName, projName, projImage } = props;
 
   const [projUrl, setProjUrl] = useState();
   const [projDesc, setProjDesc] = useState();
@@ -34,8 +49,7 @@ function ProjectCard(props) {
       })
       .then(
         (res) => {
-          console.log(res.data);
-          setProjUrl(res.data.url);
+          setProjUrl(res.data.html_url);
           setProjDesc(res.data.description);
         },
         (err) => {
@@ -50,7 +64,6 @@ function ProjectCard(props) {
       })
       .then(
         (res) => {
-          console.log(res.data);
           setProjTopics(res.data.names);
         },
         (err) => {
@@ -62,16 +75,29 @@ function ProjectCard(props) {
   const classes = useStyles();
   return (
     <Card className={classes.root}>
-      <CardActionArea />
-      <CardContent>
-        <Typography variant="h5" color="secondary">
-          {projName}
-        </Typography>
-        <Typography variant="body1">{projDesc} </Typography>
-        {projTopics && (
-          <Typography variant="overline">{projTopics.toString()}</Typography>
-        )}
-      </CardContent>
+      <CardActionArea href={projUrl}>
+        <div className={classes.carContent}>
+          <div className={classes.projImage}>
+            <Image
+              src={projImage}
+              alt={projName}
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+          <CardContent>
+            <Typography variant="h5" color="secondary">
+              {projName}
+            </Typography>
+            <Typography variant="body1">{projDesc} </Typography>
+          </CardContent>
+        </div>
+        <CardActions>
+          {projTopics && (
+            <Typography variant="overline">{projTopics.toString()}</Typography>
+          )}
+        </CardActions>
+      </CardActionArea>
     </Card>
   );
 }
