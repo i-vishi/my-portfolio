@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: theme.spacing(2),
   },
   aboutText: {
+    fontSize: "1.15em",
     order: 2,
     [theme.breakpoints.up("sm")]: {
       order: 1,

@@ -13,6 +13,8 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: theme.spacing(4),
     display: "flex",
     whiteSpace: "nowrap",
+    color: theme.palette.secondary.main,
+    fontFamily: "Cinzel"
   },
 }));
 

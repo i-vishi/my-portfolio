@@ -8,7 +8,7 @@ const theme = createMuiTheme({
       main: "#002438",
     },
     secondary: {
-      main: "#00e5ff",
+      main: "#00efff",
     },
     error: {
       main: red.A400,
@@ -24,7 +24,7 @@ const theme = createMuiTheme({
   typography: {
     htmlFontSize: 18,
     fontSize: 16,
-    fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+    fontFamily: "Oxygen, Roboto, Helvetica, Arial, sans-serif",
   },
 });
 
