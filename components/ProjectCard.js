@@ -17,9 +17,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ProjectCard(props) {
-  const { projName, projDesc } = props;
+function ProjectCard(props) {
+
+  const { repoName, projName } = props;
+
   const classes = useStyles();
+  
   return (
     <Card className={classes.root}>
       <CardActionArea />
@@ -27,9 +30,11 @@ export default function ProjectCard(props) {
         <Typography variant="h5" color="secondary">
           {projName}
         </Typography>
-        <Typography variant="body1">{projDesc}</Typography>
+        <Typography variant="body1">jdffgkjg dfsgjdrt yfkdk d</Typography>
         <Typography variant="overline">Nodejs React Vuejs</Typography>
       </CardContent>
     </Card>
   );
 }
+
+export default ProjectCard;

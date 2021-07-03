@@ -5,6 +5,7 @@ import {
   makeStyles,
   Avatar,
   Box,
+  requirePropFactory,
 } from "@material-ui/core";
 import React from "react";
 import ComponentHeading from "./ComponentHeading";
@@ -36,6 +37,13 @@ const useStyles = makeStyles((theme) => ({
     minHeight: theme.spacing(48),
     minWidth: theme.spacing(48),
   },
+  skillsList: {
+    display: "grid",
+    gridTemplateColumns: "repeat(2, minmax(140px, 200px))",
+    margin: 0,
+    overflow: "hidden",
+    padding: theme.spacing(3),
+  },
   imageGrid: {
     height: "100%",
   },
@@ -61,28 +69,19 @@ export default function About() {
             Material UI, MVVM Architecture, RoomDB, etc. Currently, I am
             focusing on Blockchain and Golang and working on my Android
             Development skills.
-          </Typography>
-          <Typography variant="body1">
+            <br />
             Some technologies I've worked with:
-            <Grid container>
-              <Grid item xs={6}>
-                <ul>
-                  <li>JavaScipt</li>
-                  <li>Node.js</li>
-                  <li>Vue.js</li>
-                  <li>React</li>
-                </ul>
-              </Grid>
-              <Grid item xs={6}>
-                <ul>
-                  <li>Next.js</li>
-                  <li>Android</li>
-                  <li>Kotlin</li>
-                  <li>MongoDB</li>
-                </ul>
-              </Grid>
-            </Grid>
           </Typography>
+          <ul className={classes.skillsList}>
+            <li>JavaScipt</li>
+            <li>Node.js</li>
+            <li>Vue.js</li>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>Android</li>
+            <li>Kotlin</li>
+            <li>MongoDB</li>
+          </ul>
         </Grid>
         <Grid item lg={5} xs={12} className={classes.aboutImage}>
           <Box

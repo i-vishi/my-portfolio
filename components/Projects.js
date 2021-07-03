@@ -1,11 +1,4 @@
-import {
-  Container,
-  Grid,
-  Typography,
-  makeStyles,
-  Avatar,
-  Box,
-} from "@material-ui/core";
+import { Container, Grid, makeStyles } from "@material-ui/core";
 import React from "react";
 import ComponentHeading from "./ComponentHeading";
 import ProjectCard from "./ProjectCard";
@@ -26,21 +19,24 @@ const useStyles = makeStyles((theme) => ({
 export default function Projects() {
   const classes = useStyles();
 
-  const data = [
-    { name: "Project 1", description: "some deikjkrv ote nn opiet" },
-    { name: "Project 2", description: "some deikjkrv ote nn opiet" },
-    { name: "Project 3", description: "some deikjkrv ote nn opiet" },
+  const repoList = [
+    { repoName: "shopping-android-app", projName: "Shopping App" },
+    { repoName: "ds-algo-web", projName: "DS & Algo Web"},
+    // { repoName: "crowdsourcing-blockchain", projName: "CrowdsourceIt!"},
+    // { repoName: "movie-data-android-app", projName: "Movie Data App"},
+    // { repoName: "csgo-league-admin", projName: "CS:GO League Auction App"},
+    // { repoName: "knowmyprof", projName: "Know My Professor"},
   ];
 
   return (
     <Container className={classes.container}>
       <ComponentHeading title="Some Projects I've Built" />
       <Grid container className={classes.proGrids} spacing={2}>
-        {data &&
-          data.map((d, i) => {
+        {repoList &&
+          repoList.map((repo, i) => {
             return (
-              <Grid item key={i}>
-                <ProjectCard projName={d.name} projDesc={d.description} />
+              <Grid item key={`card-repo-${i}`}>
+                <ProjectCard repoName={repo.repoName} projName={repo.projName} />
               </Grid>
             );
           })}
