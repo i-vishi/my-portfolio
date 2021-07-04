@@ -15,12 +15,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: 350,
     backgroundColor: "#00344899",
-    height: 380,
+    height: 390,
     "&:hover": {
       backgroundColor: "#00546899",
     },
   },
-  carContent: {
+  cardContent: {
     height: 310,
   },
   projImage: {
@@ -33,11 +33,15 @@ const useStyles = makeStyles((theme) => ({
   },
   projDescription: {
     color: "#ffffffbb",
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(1.5),
   },
   topics: {
-    padding: theme.spacing(3),
-    color: "#ffffff99",
+    padding: theme.spacing(2),
+    color: "#ffffff",
+  },
+  topicBorder: {
+    fontSize: "0.7rem",
+    padding: theme.spacing(1),
   },
 }));
 
@@ -84,7 +88,7 @@ function ProjectCard(props) {
   return (
     <Card className={classes.root}>
       <CardActionArea href={projUrl}>
-        <div className={classes.carContent}>
+        <div className={classes.cardContent}>
           <div className={classes.projImage}>
             <Image
               src={projImage}
@@ -103,9 +107,18 @@ function ProjectCard(props) {
           </CardContent>
         </div>
         <CardActions className={classes.topics}>
-          {projTopics && (
-            <Typography variant="overline">{projTopics.join(" ")}</Typography>
-          )}
+          {projTopics &&
+            projTopics.map((topic, i) => {
+              return (
+                <Typography
+                  variant="overline"
+                  key={`proj-${projName}-${i}`}
+                  className={classes.topicBorder}
+                >
+                  {topic}
+                </Typography>
+              );
+            })}
         </CardActions>
       </CardActionArea>
     </Card>
