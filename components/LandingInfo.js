@@ -18,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "none",
     marginTop: theme.spacing(12),
     fontSize: "1.25em",
+    padding: theme.spacing(2),
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
+    borderWidth: "2px"
   },
   topDetailPara: {
     width: "50%",
@@ -46,6 +50,7 @@ export default function LandingInfo() {
           variant="outlined"
           className={classes.buttons}
           color="secondary"
+          href="mailto:rr.vishalgaur@gmail.com"
         >
           Get In Touch
         </Button>

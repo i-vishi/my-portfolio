@@ -29,7 +29,11 @@ const useStyles = makeStyles((theme) => ({
   buttons: {
     textTransform: "none",
     marginTop: theme.spacing(8),
-    fontSize: "1.2em",
+    fontSize: "1.15em",
+    padding: theme.spacing(3),
+    paddingLeft: theme.spacing(4),
+    paddingRight: theme.spacing(4),
+    borderWidth: "2px",
   },
 }));
 
@@ -50,6 +54,7 @@ export default function ContactMe() {
           variant="outlined"
           className={classes.buttons}
           color="secondary"
+          href="mailto:rr.vishalgaur@gmail.com"
         >
           Say Hello
         </Button>

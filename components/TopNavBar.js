@@ -80,6 +80,9 @@ export default function TopNavBar() {
               variant="outlined"
               color="secondary"
               className={classes.resumeBtn}
+              href="/Resume_Vishal_Gaur.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Resume
             </Button>
