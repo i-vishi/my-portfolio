@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(4),
     backgroundColor: theme.palette.primary.main,
     border: "0",
+    color: "#ffffffbb",
     fontSize: "1.25em",
     borderLeft: "3px solid #3d3d3d55",
     "&:hover": {
@@ -43,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(4),
     margin: theme.spacing(1),
     minHeight: theme.spacing(48),
+    color: "#ffffffbb",
   },
   descCompany: {
     color: "#00e5ff",
@@ -50,6 +52,9 @@ const useStyles = makeStyles((theme) => ({
   descCompLink: {
     color: "#00e5ff",
     textDecoration: "none",
+  },
+  descPosition: {
+    color: "#ffffff",
   },
 }));
 
@@ -99,7 +104,7 @@ export default function Experience() {
 
   return (
     <Container id="experience" className={classes.container}>
-      <ComponentHeading title="Places I've worked at"/>
+      <ComponentHeading title="Places I've worked at" />
       <Grid container className={classes.expGrids}>
         <Grid item xs={3} container direction="column">
           {data &&
@@ -126,7 +131,7 @@ export default function Experience() {
         </Grid>
         <Grid item xs={9}>
           <Box p={1} m={1} className={classes.compDescription}>
-            <Typography variant="h5">
+            <Typography variant="h5" className={classes.descPosition}>
               {selectedJob.position}
               <span className={classes.descCompany}>
                 &nbsp;@&nbsp;

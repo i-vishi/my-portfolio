@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     whiteSpace: "nowrap",
     color: theme.palette.secondary.main,
   },
-  titleText:{
+  titleText: {
     fontFamily: "monospace",
   },
 }));
@@ -26,7 +26,7 @@ const ComponentHeading = ({ title }) => {
   return (
     <div className={classes.container}>
       <span className={classes.content}>
-        <Typography variant="h5"className={classes.titleText}>
+        <Typography variant="h5" className={classes.titleText}>
           {title}
         </Typography>
       </span>

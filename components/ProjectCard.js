@@ -31,6 +31,10 @@ const useStyles = makeStyles((theme) => ({
     objectFit: "contain",
     position: "relative",
   },
+  projDescription: {
+    color: "#ffffffbb",
+    marginTop: theme.spacing(2),
+  },
   topics: {
     padding: theme.spacing(3),
     color: "#ffffff99",
@@ -93,7 +97,9 @@ function ProjectCard(props) {
             <Typography variant="h5" color="secondary">
               {projName}
             </Typography>
-            <Typography variant="body1">{projDesc} </Typography>
+            <Typography variant="body1" className={classes.projDescription}>
+              {projDesc}{" "}
+            </Typography>
           </CardContent>
         </div>
         <CardActions className={classes.topics}>

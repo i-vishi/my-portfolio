@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutText: {
     fontSize: "1.15em",
+    color: "#ffffffbb",
     order: 2,
     [theme.breakpoints.up("sm")]: {
       order: 1,
@@ -55,7 +56,7 @@ export default function About() {
 
   return (
     <Container id="about" className={classes.container}>
-      <ComponentHeading title="About Me"/>
+      <ComponentHeading title="About Me" />
       <Grid container className={classes.aboutGrids}>
         <Grid item lg={7} xs={12} className={classes.aboutText}>
           <Typography variant="body1">

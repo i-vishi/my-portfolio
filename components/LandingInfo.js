@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
   topInfo: {
     marginTop: theme.spacing(14),
   },
+  subTitle: {
+    color: "#ffffff95",
+  },
   buttons: {
     textTransform: "none",
     marginTop: theme.spacing(12),
@@ -19,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
   topDetailPara: {
     width: "50%",
     marginTop: theme.spacing(4),
+    color: "#ffffffbb",
   },
 }));
 
@@ -30,7 +34,9 @@ export default function LandingInfo() {
       <Box className={classes.topInfo}>
         <Typography variant="h5">Hi, I am</Typography>
         <Typography variant="h1">Vishal Gaur.</Typography>
-        <Typography variant="h2">I build web apps and android apps.</Typography>
+        <Typography variant="h2" className={classes.subTitle}>
+          I build web apps and android apps.
+        </Typography>
         <Typography variant="h6" className={classes.topDetailPara}>
           I am a Software Engineer specialized in Web Development and Android
           Development with Kotlin. Currently, I am SDE at Paytm(One97

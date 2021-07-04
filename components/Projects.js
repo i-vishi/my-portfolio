@@ -60,7 +60,7 @@ export default function Projects() {
 
   return (
     <Container id="projects" className={classes.container}>
-      <ComponentHeading title="Some Projects I've Built"/>
+      <ComponentHeading title="Some Projects I've Built" />
       <Grid container className={classes.proGrids} spacing={4} justify="center">
         {repoList &&
           repoList.map((repo, i) => {
