@@ -5,7 +5,7 @@
   my-portfolio
 </h1>
 <p align="center">
-  This is my portfolio built with <a href="https://nextjs.org/" target="_blank">Next.js</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
+  This is my personal website built with <a href="https://nextjs.org/" target="_blank">Next.js</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
 </p>
 
 ![demo](snapshots/portfolio-snapshot.png)
