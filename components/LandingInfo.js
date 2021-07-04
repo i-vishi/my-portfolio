@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     paddingLeft: theme.spacing(3),
     paddingRight: theme.spacing(3),
-    borderWidth: "2px"
   },
   topDetailPara: {
     width: "50%",

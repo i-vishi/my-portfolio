@@ -28,6 +28,10 @@ const useStyles = makeStyles((theme) => ({
   navLink: {
     padding: theme.spacing(4, 0, 4, 8),
     color: "#ffffff",
+    "&:hover": {
+      color: "#00efff",
+      cursor: "pointer",
+    },
   },
   navDisplayFlex: {
     display: "flex",

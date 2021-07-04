@@ -33,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     paddingLeft: theme.spacing(4),
     paddingRight: theme.spacing(4),
-    borderWidth: "2px",
   },
 }));
 
