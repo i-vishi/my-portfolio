@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   topDetailPara: {
     width: "50%",
+    marginTop: theme.spacing(4),
   },
 }));
 

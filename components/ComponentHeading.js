@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.main,
   },
   titleText:{
-    fontFamily: "'Cinzel', serif",
+    fontFamily: "monospace",
   },
 }));
 
