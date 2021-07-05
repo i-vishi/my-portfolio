@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
   },
   imageGrid: {
     height: "100%",
+    width: "100%",
     justifyContent: "flex-end",
     [theme.breakpoints.down("sm")]: {
       justifyContent: "center",
@@ -65,7 +66,7 @@ export default function About() {
     <Container id="about" className={classes.container}>
       <ComponentHeading title="About Me" />
       <Grid container className={classes.aboutGrids}>
-        <Grid item md={7} sm={12} className={classes.aboutText}>
+        <Grid item md={7} sm={12} xs={12} className={classes.aboutText}>
           <Typography variant="body1">
             Hello! My name is Vishal Gaur and I like to build things that run on
             Android and things that live on the internet. I started Web
@@ -92,13 +93,8 @@ export default function About() {
             <li>MongoDB</li>
           </ul>
         </Grid>
-        <Grid item md={5} sm={12} className={classes.aboutImage}>
-          <Box
-            display="flex"
-            // justifyContent="flex-end"
-            alignItems="center"
-            className={classes.imageGrid}
-          >
+        <Grid item md={5} sm={12} xs={12} className={classes.aboutImage}>
+          <Box display="flex" alignItems="center" className={classes.imageGrid}>
             <Avatar
               alt="Vishal Gaur"
               src="https://github.com/i-vishi.png?size=500"
