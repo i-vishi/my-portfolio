@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    paddingTop: theme.spacing(32),
+    paddingTop: theme.spacing(36),
     paddingLeft: theme.spacing(4),
     paddingRight: theme.spacing(4),
   },

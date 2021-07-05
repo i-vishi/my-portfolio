@@ -12,7 +12,7 @@ import ComponentHeading from "./ComponentHeading";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    paddingTop: theme.spacing(32),
+    paddingTop: theme.spacing(36),
     paddingLeft: theme.spacing(12),
     paddingRight: theme.spacing(12),
   },

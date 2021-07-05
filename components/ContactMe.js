@@ -9,7 +9,7 @@ import React from "react";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    paddingTop: theme.spacing(32),
+    paddingTop: theme.spacing(36),
     paddingLeft: theme.spacing(4),
     paddingRight: theme.spacing(4),
   },
@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     color: theme.palette.secondary.main,
+    fontWeight: 900,
   },
   contactText: {
     paddingTop: theme.spacing(4),

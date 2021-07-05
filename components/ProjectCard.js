@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     height: 310,
   },
   projImage: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(3),
     height: 200,
     maxWidth: "90%",
     margin: "auto",

@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   titleText: {
     fontFamily: "monospace",
+    fontWeight: 600,
   },
 }));
 
