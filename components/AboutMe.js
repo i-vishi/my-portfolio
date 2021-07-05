@@ -14,12 +14,10 @@ const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(32),
     paddingLeft: theme.spacing(12),
-    paddingRight: theme.spacing(36),
+    paddingRight: theme.spacing(12),
   },
   aboutGrids: {
     paddingTop: theme.spacing(8),
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
   },
   aboutText: {
     fontSize: "1.15em",

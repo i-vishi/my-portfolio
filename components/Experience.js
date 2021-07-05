@@ -12,13 +12,11 @@ import ComponentHeading from "./ComponentHeading";
 const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(32),
-    paddingLeft: theme.spacing(40),
-    paddingRight: theme.spacing(12),
+    paddingLeft: theme.spacing(24),
+    paddingRight: theme.spacing(24),
   },
   expGrids: {
     paddingTop: theme.spacing(8),
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
   },
   compTab: {
     padding: theme.spacing(4),

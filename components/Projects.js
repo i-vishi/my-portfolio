@@ -11,8 +11,6 @@ const useStyles = makeStyles((theme) => ({
   },
   proGrids: {
     paddingTop: theme.spacing(8),
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
   },
 }));
 
@@ -61,7 +59,7 @@ export default function Projects() {
   return (
     <Container id="projects" className={classes.container}>
       <ComponentHeading title="Some Projects I've Built" />
-      <Grid container className={classes.proGrids} spacing={4} justify="center">
+      <Grid container className={classes.proGrids} spacing={4} justify="space-between">
         {repoList &&
           repoList.map((repo, i) => {
             return (
