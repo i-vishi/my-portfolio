@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -10,6 +10,9 @@ import {
   Typography,
   Button,
   Hidden,
+  Drawer,
+  SwipeableDrawer,
+  isWidthUp,
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
   navLink: {
-    margin: theme.spacing(4, 0, 4, 8),
+    margin: theme.spacing(4, 4, 4, 4),
     color: "#ffffff",
     "&:hover": {
       color: "#00efff",
@@ -40,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#00243855",
   },
   resumeBtn: {
-    marginLeft: theme.spacing(8),
+    margin: theme.spacing(0, 4),
   },
   menuContainer: {
     display: "inline-block",
@@ -78,6 +81,25 @@ const useStyles = makeStyles((theme) => ({
   changeBar2: {
     opacity: 0,
   },
+  menuRoot: {
+    width: "350px",
+    height: "100%",
+    flexShrink: 0,
+    backgroundColor: "#002438",
+  },
+  appBar: {
+    zIndex: theme.zIndex.drawer + 10,
+  },
+  drawerHeader: {
+    display: "flex",
+    height: "80px",
+    alignItems: "center",
+    padding: theme.spacing(0, 1),
+    paddingRight: theme.spacing(6),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+    justifyContent: "flex-end",
+  },
 }));
 
 export default function TopNavBar() {
@@ -102,9 +124,48 @@ export default function TopNavBar() {
     </div>
   );
 
+  const menuItems = (
+    <div className={classes.menuRoot} role="presentation">
+      <div className={classes.drawerHeader}>{AnimatedMenuBtn}</div>
+      <Link href="/#about">
+        <Typography variant="h5" align="center" className={classes.navLink}>
+          About
+        </Typography>
+      </Link>
+      <Link href="/#experience">
+        <Typography variant="h5" align="center" className={classes.navLink}>
+          Experience
+        </Typography>
+      </Link>
+      <Link href="/#projects">
+        <Typography variant="h5" align="center" className={classes.navLink}>
+          Projects
+        </Typography>
+      </Link>
+      <Link href="/#contact">
+        <Typography variant="h5" align="center" className={classes.navLink}>
+          Contact
+        </Typography>
+      </Link>
+
+      <div align="center">
+        <Button
+          variant="outlined"
+          color="secondary"
+          style={{ marginTop: "20px", padding: "8px" }}
+          href="/Resume_Vishal_Gaur.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </Button>
+      </div>
+    </div>
+  );
+
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" className={classes.appBar}>
         <Container maxWidth="lg">
           <Toolbar className={classes.toolbarStyle}>
             <IconButton edge="start" color="secondary" className={classes.logo}>
@@ -152,6 +213,16 @@ export default function TopNavBar() {
           </Toolbar>
         </Container>
       </AppBar>
+      <div>
+        <SwipeableDrawer
+          anchor="right"
+          open={btnState}
+          onClose={() => setBtnState(false)}
+          onOpen={() => setBtnState(true)}
+        >
+          {menuItems}
+        </SwipeableDrawer>
+      </div>
     </div>
   );
 }
