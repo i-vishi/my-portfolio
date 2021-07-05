@@ -5,6 +5,8 @@ import {
   makeStyles,
   Box,
   Paper,
+  isWidthDown,
+  withWidth,
 } from "@material-ui/core";
 import React, { useState } from "react";
 import ComponentHeading from "./ComponentHeading";
@@ -14,11 +16,25 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(36),
     paddingLeft: theme.spacing(24),
     paddingRight: theme.spacing(24),
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: theme.spacing(4),
+      paddingRight: theme.spacing(4),
+    },
   },
   expGrids: {
     paddingTop: theme.spacing(8),
   },
-  compTab: {
+  tabsGrid: {
+    [theme.breakpoints.down("xs")]: {
+      justifyContent: "center",
+    },
+  },
+  descGrid: {
+    [theme.breakpoints.down("xs")]: {
+      paddingTop: theme.spacing(8),
+    },
+  },
+  compTabs: {
     padding: theme.spacing(4),
     backgroundColor: theme.palette.primary.main,
     border: "0",
@@ -27,6 +43,12 @@ const useStyles = makeStyles((theme) => ({
     borderLeft: "3px solid #3d3d3d55",
     "&:hover": {
       backgroundColor: "#00344899",
+    },
+    [theme.breakpoints.down("xs")]: {
+      border: "0",
+      borderBottom: "3px solid #3d3d3d55",
+      paddingLeft: theme.spacing(8),
+      paddingRight: theme.spacing(8),
     },
   },
   selectedTab: {
@@ -37,6 +59,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "1.25em",
     fontWeight: "600",
     borderLeft: "3px solid #00e5ff",
+    [theme.breakpoints.down("xs")]: {
+      border: "0",
+      borderBottom: "3px solid #00e5ff",
+      paddingLeft: theme.spacing(8),
+      paddingRight: theme.spacing(8),
+    },
   },
   compDescription: {
     paddingLeft: theme.spacing(4),
@@ -56,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Experience() {
+function Experience(props) {
   const classes = useStyles();
 
   const data = [
@@ -104,7 +132,14 @@ export default function Experience() {
     <Container id="experience" className={classes.container}>
       <ComponentHeading title="Places I've worked at" />
       <Grid container className={classes.expGrids}>
-        <Grid item xs={3} container direction="column">
+        <Grid
+          item
+          sm={3}
+          xs={12}
+          container
+          direction={isWidthDown("xs", props.width) ? "row" : "column"}
+          className={classes.tabsGrid}
+        >
           {data &&
             data.map((company, i) => {
               return (
@@ -115,7 +150,7 @@ export default function Experience() {
                     className={
                       company.id == selectedJob.id
                         ? classes.selectedTab
-                        : classes.compTab
+                        : classes.compTabs
                     }
                     onClick={() => {
                       setSelectedJob(company);
@@ -127,7 +162,7 @@ export default function Experience() {
               );
             })}
         </Grid>
-        <Grid item xs={9}>
+        <Grid item sm={9} xs={12} className={classes.descGrid}>
           <Box p={1} m={1} className={classes.compDescription}>
             <Typography variant="h5" className={classes.descPosition}>
               {selectedJob.position}
@@ -152,3 +187,5 @@ export default function Experience() {
     </Container>
   );
 }
+
+export default withWidth()(Experience);
