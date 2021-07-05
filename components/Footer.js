@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: theme.spacing(4),
     paddingBottom: theme.spacing(4),
     [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(20),
+      paddingTop: theme.spacing(16),
     },
   },
   textContainer: {

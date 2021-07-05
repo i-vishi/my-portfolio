@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(4),
     paddingRight: theme.spacing(4),
     [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(12),
+      paddingTop: theme.spacing(16),
     },
   },
   proGrids: {
