@@ -1,10 +1,4 @@
-import {
-  Button,
-  Container,
-  Grid,
-  makeStyles,
-  Typography,
-} from "@material-ui/core";
+import { Container, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
 const useStyles = makeStyles((theme) => ({
@@ -34,9 +28,9 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: "none",
     fontFamily: "monospace",
     "&:hover": {
-        color: "#00efff"
-    }
-  }
+      color: "#00efff",
+    },
+  },
 }));
 
 export default function Footer() {
@@ -45,11 +39,15 @@ export default function Footer() {
   return (
     <Container id="contact" className={classes.container}>
       <div className={classes.textContainer}>
-      <div className={classes.border} />
+        <div className={classes.border} />
         <span className={classes.content}>
           <Typography variant="subtitle1" className={classes.titleText}>
-              <a href="https://github.com/i-vishi/my-portfolio" target="_blank" className={classes.gitLink}>
-            Built by Vishal Gaur
+            <a
+              href="https://github.com/i-vishi/my-portfolio"
+              target="_blank"
+              className={classes.gitLink}
+            >
+              Built by Vishal Gaur
             </a>
           </Typography>
         </span>

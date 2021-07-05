@@ -1,10 +1,4 @@
-import {
-  Button,
-  Container,
-  Grid,
-  makeStyles,
-  Typography,
-} from "@material-ui/core";
+import { Button, Container, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
 const useStyles = makeStyles((theme) => ({
@@ -12,11 +6,6 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(36),
     paddingLeft: theme.spacing(4),
     paddingRight: theme.spacing(4),
-  },
-  contactGrid: {
-    paddingTop: theme.spacing(8),
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
   },
   title: {
     color: theme.palette.secondary.main,
