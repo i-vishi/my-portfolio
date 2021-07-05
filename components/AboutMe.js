@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(36),
     paddingLeft: theme.spacing(12),
     paddingRight: theme.spacing(12),
+    [theme.breakpoints.down("sm")]: {
+      paddingLeft: theme.spacing(4),
+      paddingRight: theme.spacing(4),
+    },
   },
   aboutGrids: {
     paddingTop: theme.spacing(8),
@@ -22,15 +26,15 @@ const useStyles = makeStyles((theme) => ({
   aboutText: {
     fontSize: "1.15em",
     color: "#ffffffbb",
-    order: 2,
-    [theme.breakpoints.up("sm")]: {
-      order: 1,
+    order: 1,
+    [theme.breakpoints.down("sm")]: {
+      order: 2,
     },
   },
   aboutImage: {
-    order: 1,
-    [theme.breakpoints.up("sm")]: {
-      order: 2,
+    order: 2,
+    [theme.breakpoints.down("sm")]: {
+      order: 1,
     },
   },
   myImage: {
@@ -39,13 +43,18 @@ const useStyles = makeStyles((theme) => ({
   },
   skillsList: {
     display: "grid",
-    gridTemplateColumns: "repeat(2, minmax(140px, 200px))",
+    gridTemplateColumns: "repeat(2, minmax(180px, 400px))",
     margin: 0,
     overflow: "hidden",
-    padding: theme.spacing(3),
+    padding: theme.spacing(4),
   },
   imageGrid: {
     height: "100%",
+    justifyContent: "flex-end",
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "center",
+      paddingBottom: theme.spacing(6),
+    },
   },
 }));
 
@@ -56,7 +65,7 @@ export default function About() {
     <Container id="about" className={classes.container}>
       <ComponentHeading title="About Me" />
       <Grid container className={classes.aboutGrids}>
-        <Grid item lg={7} xs={12} className={classes.aboutText}>
+        <Grid item md={7} sm={12} className={classes.aboutText}>
           <Typography variant="body1">
             Hello! My name is Vishal Gaur and I like to build things that run on
             Android and things that live on the internet. I started Web
@@ -83,10 +92,10 @@ export default function About() {
             <li>MongoDB</li>
           </ul>
         </Grid>
-        <Grid item lg={5} xs={12} className={classes.aboutImage}>
+        <Grid item md={5} sm={12} className={classes.aboutImage}>
           <Box
             display="flex"
-            justifyContent="flex-end"
+            // justifyContent="flex-end"
             alignItems="center"
             className={classes.imageGrid}
           >
