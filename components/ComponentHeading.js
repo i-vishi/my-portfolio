@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   border: {
     borderBottom: "1px solid white",
     width: "50%",
-    [theme.breakpoints.down("sm")] : {
+    [theme.breakpoints.down("sm")]: {
       width: "75%",
     },
   },

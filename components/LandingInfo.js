@@ -11,16 +11,16 @@ const useStyles = makeStyles((theme) => ({
   topInfo: {
     marginTop: theme.spacing(14),
   },
-  fullName:{
-    [theme.breakpoints.down("sm")]:{
-      fontSize: "4.75em"
-    }
+  fullName: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "4.75em",
+    },
   },
   subTitle: {
     color: "#ffffff95",
-    [theme.breakpoints.down("sm")]:{
-      fontSize: "4em"
-    }
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "4em",
+    },
   },
   buttons: {
     textTransform: "none",
@@ -34,9 +34,9 @@ const useStyles = makeStyles((theme) => ({
     width: "50%",
     marginTop: theme.spacing(4),
     color: "#ffffffbb",
-    [theme.breakpoints.down("sm")]:{
+    [theme.breakpoints.down("sm")]: {
       width: "100%",
-    }
+    },
   },
 }));
 
@@ -47,7 +47,9 @@ export default function LandingInfo() {
     <Container>
       <Box className={classes.topInfo}>
         <Typography variant="h5">Hi, I am</Typography>
-        <Typography variant="h1" className={classes.fullName}>Vishal Gaur.</Typography>
+        <Typography variant="h1" className={classes.fullName}>
+          Vishal Gaur.
+        </Typography>
         <Typography variant="h2" className={classes.subTitle}>
           I build web apps and android apps.
         </Typography>
