@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
   AppBar,
   Container,
@@ -10,10 +9,13 @@ import {
   Typography,
   Button,
   Hidden,
-  Drawer,
   SwipeableDrawer,
-  isWidthUp,
+  Divider,
+  Link,
 } from "@material-ui/core";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -100,6 +102,18 @@ const useStyles = makeStyles((theme) => ({
     ...theme.mixins.toolbar,
     justifyContent: "flex-end",
   },
+  linksDiv: {
+    marginTop: theme.spacing(4),
+    padding: theme.spacing(2, 4),
+    display: "flex",
+    justifyContent: "space-around",
+  },
+  footLink: {
+    color: "#ffffffbb",
+    "&:hover": {
+      color: "#00efff",
+    },
+  },
 }));
 
 export default function TopNavBar() {
@@ -148,7 +162,7 @@ export default function TopNavBar() {
         </Typography>
       </Link>
 
-      <div align="center">
+      <div align="center" style={{ marginBottom: "48px" }}>
         <Button
           variant="outlined"
           color="secondary"
@@ -159,6 +173,32 @@ export default function TopNavBar() {
         >
           Resume
         </Button>
+      </div>
+
+      <Divider style={{ background: "#00efff" }} variant="middle" />
+
+      <div className={classes.linksDiv} align="center">
+        <Link
+          href="https://github.com/i-vishi"
+          target="_blank"
+          className={classes.footLink}
+        >
+          <GitHubIcon />
+        </Link>
+        <Link
+          href="https://linkedin.com/in/i-vishi"
+          target="_blank"
+          className={classes.footLink}
+        >
+          <LinkedInIcon />
+        </Link>
+        <Link
+          href="https://twitter.com/iamvishalgaur"
+          target="_blank"
+          className={classes.footLink}
+        >
+          <TwitterIcon />
+        </Link>
       </div>
     </div>
   );
