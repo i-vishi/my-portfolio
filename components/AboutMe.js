@@ -84,7 +84,7 @@ export default function About() {
             Some technologies I've worked with:
           </Typography>
           <ul className={classes.skillsList}>
-            <li>JavaScipt</li>
+            <li>JavaScript</li>
             <li>Node.js</li>
             <li>Vue.js</li>
             <li>React</li>

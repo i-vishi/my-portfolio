@@ -110,7 +110,7 @@ function Experience(props) {
       description: [
         "Worked as an Intern in Android Team",
         "Learned Kotlin and Android and made some projects assigned as tasks during my internship.",
-        "Some applications built during internship - Movie Data App, Shopping App, etc",
+        "Some applications built during the internship - Movie Data App, Shopping App, etc",
       ],
     },
     {
