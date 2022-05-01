@@ -89,20 +89,20 @@ function Experience(props) {
   const classes = useStyles();
 
   const data = [
-    // {
-    //   name: "Paytm",
-    //   id: "paytm-2",
-    //   position: "Software Engineer - Android",
-    //   url: "https://paytm.com",
-    //   timePeriod: "July 2021 - Present",
-    //   description: [
-    //     "Working as Android Developer",
-    //     "Some more points",
-    //     "Some more points",
-    //   ],
-    // },
     {
-      name: "Paytm",
+      name: "Paytm (SDE)",
+      id: "paytm-2",
+      position: "Software Engineer - Android",
+      url: "https://paytm.com",
+      timePeriod: "July 2021 - April 2022",
+      description: [
+        "Worked as Android Developer in Recharges Team.",
+        "Designed, built, and maintained high performance, reusable, and reliable code.",
+        "Worked in major UI changes across different verticals and some new features that had huge impact.",
+      ],
+    },
+    {
+      name: "Paytm (Intern)",
       id: "paytm-1",
       position: "SDE Intern (Android)",
       url: "https://paytm.com",
