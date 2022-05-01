@@ -54,9 +54,9 @@ export default function LandingInfo() {
           I build web apps and android apps.
         </Typography>
         <Typography variant="h6" className={classes.topDetailPara}>
-          I am a Software Engineer specialized in Web Development and Android
-          Development with Kotlin. Currently, I am SDE at Paytm(One97
-          Communications Ltd.) working with their Android Team.
+          I am a Software Engineer specialized in Android Development with Kotlin 
+          and Web Development. Currently, I am Android Developer at Testbook and in the past I have worked at Paytm(One97
+          Communications Ltd.) as Software Engineer (Android).
         </Typography>
         <Button
           variant="outlined"
