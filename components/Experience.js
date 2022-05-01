@@ -90,29 +90,30 @@ function Experience(props) {
 
   const data = [
     {
-      name: "Paytm (SDE)",
+      name: "Paytm",
       id: "paytm-2",
       position: "Software Engineer - Android",
       url: "https://paytm.com",
-      timePeriod: "July 2021 - April 2022",
+      timePeriod: "January 2021 - April 2022",
       description: [
         "Worked as Android Developer in Recharges Team.",
         "Designed, built, and maintained high performance, reusable, and reliable code.",
         "Worked in major UI changes across different verticals and some new features that had huge impact.",
+        "Also interned here and learned Android Development with Kotlin and built some applications like Movie Data App, Shopping App, etc.",
       ],
     },
-    {
-      name: "Paytm (Intern)",
-      id: "paytm-1",
-      position: "SDE Intern (Android)",
-      url: "https://paytm.com",
-      timePeriod: "January 2021 - June 2021",
-      description: [
-        "Worked as an Intern in Android Team",
-        "Learned Kotlin and Android and made some projects assigned as tasks during my internship.",
-        "Some applications built during the internship - Movie Data App, Shopping App, etc",
-      ],
-    },
+//     {
+//       name: "Paytm (Intern)",
+//       id: "paytm-1",
+//       position: "SDE Intern (Android)",
+//       url: "https://paytm.com",
+//       timePeriod: "January 2021 - June 2021",
+//       description: [
+//         "Worked as an Intern in Android Team",
+//         "Learned Kotlin and Android and made some projects assigned as tasks during my internship.",
+//         "Some applications built during the internship - Movie Data App, Shopping App, etc",
+//       ],
+//     },
     {
       name: "MathWorks",
       id: "mathworks-1",
