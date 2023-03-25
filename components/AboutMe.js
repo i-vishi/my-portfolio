@@ -78,7 +78,7 @@ export default function About() {
             VueJs and React. I have worked at a huge financial corporation and
             learned Android development and build some projects that have
             Material UI, MVVM Architecture, RoomDB, etc. Currently, I am
-            focusing on Blockchain and Golang and working on my Android
+            focusing on Blockchain and working on my Android
             Development skills.
             <br />
             Some technologies I've worked with:
