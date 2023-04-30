@@ -90,6 +90,19 @@ function Experience(props) {
 
   const data = [
     {
+      name: "Testbook",
+      id: "testbook-1",
+      position: "SDE-1 - Android",
+      url: "https://testbook.com",
+      timePeriod: "April 2022 - Present",
+      description: [
+        "Revamped Masterclass and Masterseries screens using Jetpack Compose UI.",
+        "Optimized Work Managers in the app to reduce its related crashes by around 70 percent.",
+        "Worked in major changes in payment flow that had hude impact.",
+        "Designed some reusable and maintainable ui components for Compose UI.",
+      ],
+    },
+    {
       name: "Paytm",
       id: "paytm-2",
       position: "Software Engineer - Android",
