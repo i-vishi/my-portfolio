@@ -78,20 +78,20 @@ export default function About() {
             VueJs and React. I have worked at a huge financial corporation and
             learned Android development and build some projects that have
             Material UI, MVVM Architecture, RoomDB, etc. Currently, I am
-            focusing on Blockchain and working on my Android
-            Development skills.
+            working at Testbook Edu Solutions Pvt. Ltd. and mainly using Jetpack Compose
+            for development.
             <br />
             Some technologies I've worked with:
           </Typography>
           <ul className={classes.skillsList}>
-            <li>JavaScript</li>
-            <li>Node.js</li>
+            <li>Android</li>
+            <li>Kotlin</li>
+            <li>Jetpack Compose</li>
+            <li>MVVM</li>
             <li>Vue.js</li>
             <li>React</li>
             <li>Next.js</li>
-            <li>Android</li>
-            <li>Kotlin</li>
-            <li>MongoDB</li>
+            <li>Git</li>
           </ul>
         </Grid>
         <Grid item md={5} sm={12} xs={12} className={classes.aboutImage}>
