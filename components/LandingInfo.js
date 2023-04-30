@@ -51,12 +51,12 @@ export default function LandingInfo() {
           Vishal Gaur.
         </Typography>
         <Typography variant="h2" className={classes.subTitle}>
-          I build web apps and android apps.
+          I build android apps and web apps.
         </Typography>
         <Typography variant="h6" className={classes.topDetailPara}>
-          I am a Software Engineer specialized in Android Development with Kotlin 
-          and Web Development. Currently, I am Android Developer at Testbook and in the past I have worked at Paytm(One97
-          Communications Ltd.) as Software Engineer (Android).
+          I am a Software Engineer specialized in Android Development with Kotlin / Compose 
+          and Web Development. Currently, I am SDE-1 - Android at Testbook Edu Solutions Pvt Ltd. and 
+          in the past I have worked at Paytm(One97 Communications Ltd.) as Software Engineer (Android).
         </Typography>
         <Button
           variant="outlined"
