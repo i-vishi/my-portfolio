@@ -5,7 +5,7 @@
   my-portfolio
 </h1>
 <p align="center">
-  This is my personal website built with <a href="https://nextjs.org/" target="_blank">Next.js</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
+  This is my portfolio website built with <a href="https://nextjs.org/" target="_blank">Next.js</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
 </p>
 
 ![demo](snapshots/portfolio-snapshot.png)
@@ -24,4 +24,4 @@ npm run dev
 yarn dev
 ```
 
-<p align="center"> Made with ❤️ by <a href="https://github.com/i-vishi">Vishal Gaur</a></p>
+<p align="center"> Made with ❤️ by <a href="https://github.com/i-vishi">me</a></p>
