@@ -92,14 +92,15 @@ function Experience(props) {
     {
       name: "Testbook",
       id: "testbook-1",
-      position: "SDE-1 - Android",
+      position: "SDE-2 - Android",
       url: "https://testbook.com",
       timePeriod: "April 2022 - Present",
       description: [
-        "Revamped Masterclass and Masterseries screens using Jetpack Compose UI.",
-        "Optimized Work Managers in the app to reduce its related crashes by around 70 percent.",
-        "Worked in major changes in payment flow that had huge impact.",
-        "Designed some reusable and maintainable ui components for Compose UI.",
+        "Implemented Jetpack Compose UI to eliminate redundant re-compositions, benefiting over 5 million users.",
+        "Introduced Masterclass and Masterseries using Jetpack Compose in a modern MVVM architecture, attracting 50,000+ daily unique visitors for a captivating user experience.",
+        "Spearheaded WorkManagers optimization, reducing crashes by 90% (50K to 1K), ensuring a stable user experience for millions.",
+        "Pioneered seamless integration of EMI Payment flow using eNACH for Courses, resulting in a 25% boost in revenue. Offered flexible payment options, attracting more customers and increasing sales conversions.",
+        "Migrated 15+ Volley APIs to Retrofit and OkHttp, introducing a custom utility for seamless integration, code maintainability, and flexibility for a 10-member team."
       ],
     },
     {
@@ -109,10 +110,11 @@ function Experience(props) {
       url: "https://paytm.com",
       timePeriod: "January 2021 - April 2022",
       description: [
-        "Worked as Android Developer in Recharges Team.",
-        "Designed, built, and maintained high performance, reusable, and reliable code.",
-        "Worked in major UI changes across different verticals and some new features that had huge impact.",
-        "Also interned here and learned Android Development with Kotlin and built some applications like Movie Data App, Shopping App, etc.",
+        "Modernized Mobile Recharge and mobile operator selection with a new UI,increasing engagement for over 100 million users.",
+        "Implemented a critical feature to handle sudden price changes of mobile operators, ensuring seamless operations, and maximizing customer satisfaction with millions of transactions processed daily.",
+        "Collaborated seamlessly with the iOS and web teams of 15 members, actively contributing to the successful implementation of Utility bill payment.",
+        "Integrated split bill with Utility Bill payments, enabling convenient expense splitting for more than 1 million transactions.",
+        "Demonstrated leadership by leading the team in writing unit and UI tests using JUnit, Espresso, and Mockito, achieving an impressive 50% code coverage and ensuring code quality and robustness."
       ],
     },
 //     {
@@ -134,9 +136,8 @@ function Experience(props) {
       url: "https://mathworks.com",
       timePeriod: "May 2020 - July 2020",
       description: [
-        "Implemented a Simulink Model Randomizer for PLC Controller and learned Ladder Logic for the task.",
-        "Refactored the code to follow Object-Oriented Design and made it efficient.",
-        "Learned MATLAB and Simulink to build the project.",
+        "Developed a Simulink Model Randomizer for PLC Controller, optimizing system performance and functionality.",
+        "Optimized 5000+ lines of code through comprehensive refactoring, ensuring seamless and efficient operation."
       ],
     },
   ];
