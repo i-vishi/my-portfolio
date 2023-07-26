@@ -55,7 +55,7 @@ export default function LandingInfo() {
         </Typography>
         <Typography variant="h6" className={classes.topDetailPara}>
           I am a Software Engineer specialized in Android Development with Kotlin / Compose 
-          and Web Development. Currently, I am SDE-1 - Android at Testbook Edu Solutions Pvt Ltd. and 
+          and Web Development. Currently, I am SDE-2 - Android at Testbook Edu Solutions Pvt Ltd. and 
           in the past I have worked at Paytm(One97 Communications Ltd.) as Software Engineer (Android).
         </Typography>
         <Button
