@@ -22,6 +22,12 @@ export default function Projects() {
 
   const repoList = [
     {
+      repoName: "Prefixer",
+      projName: "Prefixer: Android Library",
+      projImage:
+        "https://github.com/i-vishi/Prefixer/raw/main/snapshots/all_preferences_activity.png",
+    },
+    {
       repoName: "shopping-android-app",
       projName: "Shopping App",
       projImage:
@@ -50,13 +56,13 @@ export default function Projects() {
       projName: "CS:GO League Auction App",
       projImage:
         "https://github.com/i-vishi/csgo-league-admin/raw/master/snapshots/home.png",
-    },
-    {
-      repoName: "knowmyprof",
-      projName: "Know My Professor",
-      projImage:
-        "https://github.com/i-vishi/knowmyprof/raw/master/snapshots/home.png",
-    },
+    }
+    // {
+    //   repoName: "knowmyprof",
+    //   projName: "Know My Professor",
+    //   projImage:
+    //     "https://github.com/i-vishi/knowmyprof/raw/master/snapshots/home.png",
+    // },
   ];
 
   return (
