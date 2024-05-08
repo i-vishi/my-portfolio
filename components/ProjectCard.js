@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
   },
   topicBorder: {
     fontSize: "0.7rem",
-    padding: theme.spacing(1),
+    padding: theme.spacing(1,0.5,1,0.5),
   },
 }));
 
@@ -105,14 +105,15 @@ function ProjectCard(props) {
             </Typography>
           </CardContent>
         </div>
-        <CardActions className={classes.topics}>
+        <CardActions className={classes.topics} disableSpacing={false}>
           {projTopics &&
-            projTopics.map((topic, i) => {
+            projTopics.slice(0, 4).map((topic, i) => {
               return (
                 <Typography
                   variant="overline"
                   key={`proj-${projName}-${i}`}
                   className={classes.topicBorder}
+                  noWrap
                 >
                   {topic}
                 </Typography>

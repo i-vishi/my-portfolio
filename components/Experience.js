@@ -14,8 +14,8 @@ import ComponentHeading from "./ComponentHeading";
 const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(36),
-    paddingLeft: theme.spacing(24),
-    paddingRight: theme.spacing(24),
+    paddingLeft: theme.spacing(12),
+    paddingRight: theme.spacing(12),
     [theme.breakpoints.down("sm")]: {
       paddingTop: theme.spacing(16),
       paddingLeft: theme.spacing(4),
@@ -48,8 +48,8 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       border: "0",
       borderBottom: "3px solid #3d3d3d55",
-      paddingLeft: theme.spacing(8),
-      paddingRight: theme.spacing(8),
+      paddingLeft: theme.spacing(4),
+      paddingRight: theme.spacing(4),
     },
   },
   selectedTab: {

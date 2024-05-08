@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <TopNavBar />
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
           <Box p={1} pt={2}>
             <Component {...pageProps} />
           </Box>
