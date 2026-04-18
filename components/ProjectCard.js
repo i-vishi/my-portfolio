@@ -88,7 +88,7 @@ function ProjectCard(props) {
     <Card className={classes.root}>
       <CardActionArea href={projUrl}>
         <div className={classes.cardContent}>
-          <div className={classes.projImage}>
+          <div className={classes.projImage} style={{ position: "relative", height: 200 }}>
             <Image
               src={projImage}
               alt={projName}
