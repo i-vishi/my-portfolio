@@ -1,0 +1,17 @@
+/*
+  Critical styles applied before any JS runs.
+  These prevent FOUC (flash of unstyled content) during hydration.
+*/
+
+/* Match the theme's background so there's no white flash before CssBaseline loads */
+html,
+body {
+  background-color: #002438;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent images from ever expanding beyond their container during hydration */
+img {
+  max-width: 100%;
+}

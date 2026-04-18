@@ -1,97 +1,72 @@
-import { Container, Link, makeStyles, Typography } from "@material-ui/core";
+import { Container, Link, Typography, Box } from "@mui/material";
 import React from "react";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import GitHubIcon from "@material-ui/icons/GitHub";
-
-const useStyles = makeStyles((theme) => ({
-  container: {
-    paddingTop: theme.spacing(36),
-    paddingLeft: theme.spacing(4),
-    paddingRight: theme.spacing(4),
-    paddingBottom: theme.spacing(2),
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(16),
-    },
-  },
-  textContainer: {
-    display: "flex",
-    alignItems: "center",
-  },
-  border: {
-    borderBottom: "1px solid #00efff",
-    width: "100%",
-  },
-  content: {
-    paddingRight: theme.spacing(4),
-    paddingLeft: theme.spacing(4),
-    display: "flex",
-    whiteSpace: "nowrap",
-    color: "#ffffffbb",
-  },
-  gitLink: {
-    color: "#ffffffbb",
-    textDecoration: "none",
-    fontFamily: "monospace",
-    "&:hover": {
-      color: "#00efff",
-    },
-  },
-  linksDiv: {
-    margin: theme.spacing(2),
-  },
-  footLink: {
-    color: "#ffffffbb",
-    padding: theme.spacing(0, 2),
-    "&:hover": {
-      color: "#00efff",
-    },
-  },
-}));
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 export default function Footer() {
-  const classes = useStyles();
-
   return (
-    <Container id="contact" className={classes.container}>
-      <div className={classes.textContainer}>
-        <div className={classes.border} />
-        <span className={classes.content}>
-          <Typography variant="subtitle1" className={classes.titleText}>
-            <a
+    <Container
+      id="footer"
+      sx={{
+        pt: { xs: 16, md: 36 },
+        pl: 4,
+        pr: 4,
+        pb: 2,
+      }}
+    >
+      <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box sx={{ borderBottom: "1px solid #00efff", width: "100%" }} />
+        <Box
+          component="span"
+          sx={{
+            px: 4,
+            display: "flex",
+            whiteSpace: "nowrap",
+            color: "#ffffffbb",
+          }}
+        >
+          <Typography variant="subtitle1">
+            <Box
+              component="a"
               href="https://github.com/i-vishi/my-portfolio"
               target="_blank"
-              className={classes.gitLink}
+              sx={{
+                color: "#ffffffbb",
+                textDecoration: "none",
+                fontFamily: "monospace",
+                "&:hover": { color: "#00efff" },
+              }}
             >
               Built by Vishal Gaur
-            </a>
+            </Box>
           </Typography>
-        </span>
-        <div className={classes.border} />
-      </div>
-      <div className={classes.linksDiv} align="center">
+        </Box>
+        <Box sx={{ borderBottom: "1px solid #00efff", width: "100%" }} />
+      </Box>
+      <Box sx={{ m: 2 }} align="center">
         <Link
           href="https://github.com/i-vishi"
           target="_blank"
-          className={classes.footLink}
+          sx={{ color: "#ffffffbb", px: 2, "&:hover": { color: "#00efff" } }}
         >
           <GitHubIcon />
         </Link>
         <Link
           href="https://linkedin.com/in/i-vishi"
           target="_blank"
-          className={classes.footLink}
+          sx={{ color: "#ffffffbb", px: 2, "&:hover": { color: "#00efff" } }}
         >
           <LinkedInIcon />
         </Link>
         <Link
           href="https://twitter.com/iamvishalgaur"
           target="_blank"
-          className={classes.footLink}
+          sx={{ color: "#ffffffbb", px: 2, "&:hover": { color: "#00efff" } }}
         >
           <TwitterIcon />
         </Link>
-      </div>
+      </Box>
     </Container>
   );
 }

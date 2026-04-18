@@ -1,92 +1,70 @@
-import { Container, Grid, makeStyles } from "@material-ui/core";
+import { Container, Grid } from "@mui/material";
 import React from "react";
 import ComponentHeading from "./ComponentHeading";
 import ProjectCard from "./ProjectCard";
 
-const useStyles = makeStyles((theme) => ({
-  container: {
-    paddingTop: theme.spacing(36),
-    paddingLeft: theme.spacing(4),
-    paddingRight: theme.spacing(4),
-    [theme.breakpoints.down("sm")]: {
-      paddingTop: theme.spacing(16),
-    },
+const repoList = [
+  {
+    repoName: "Prefixer",
+    projName: "Prefixer: Android Library",
+    projImage:
+      "https://github.com/i-vishi/Prefixer/raw/main/snapshots/all_preferences_activity.png",
   },
-  proGrids: {
-    paddingTop: theme.spacing(8),
+  {
+    repoName: "shopping-android-app",
+    projName: "Shopping App",
+    projImage:
+      "https://github.com/i-vishi/shopping-android-app/raw/master/snapshots/shopping-home-customer.png",
   },
-}));
+  {
+    repoName: "ds-algo-web",
+    projName: "DS & Algo Web",
+    projImage:
+      "https://github.com/i-vishi/ds-algo-web/raw/main/assets/snapshots/homepage.png",
+  },
+  {
+    repoName: "crowdsourcing-blockchain",
+    projName: "CrowdsourceIt!",
+    projImage:
+      "https://github.com/i-vishi/crowdsourcing-blockchain/raw/main/snapshots/home.png",
+  },
+  {
+    repoName: "movie-data-android-app",
+    projName: "Movie Data App",
+    projImage:
+      "https://github.com/i-vishi/movie-data-android-app/raw/master/snapshots/home.png",
+  },
+  {
+    repoName: "csgo-league-admin",
+    projName: "CS:GO League Auction App",
+    projImage:
+      "https://github.com/i-vishi/csgo-league-admin/raw/master/snapshots/home.png",
+  },
+];
 
 export default function Projects() {
-  const classes = useStyles();
-
-  const repoList = [
-    {
-      repoName: "Prefixer",
-      projName: "Prefixer: Android Library",
-      projImage:
-        "https://github.com/i-vishi/Prefixer/raw/main/snapshots/all_preferences_activity.png",
-    },
-    {
-      repoName: "shopping-android-app",
-      projName: "Shopping App",
-      projImage:
-        "https://github.com/i-vishi/shopping-android-app/raw/master/snapshots/shopping-home-customer.png",
-    },
-    {
-      repoName: "ds-algo-web",
-      projName: "DS & Algo Web",
-      projImage:
-        "https://github.com/i-vishi/ds-algo-web/raw/main/assets/snapshots/homepage.png",
-    },
-    {
-      repoName: "crowdsourcing-blockchain",
-      projName: "CrowdsourceIt!",
-      projImage:
-        "https://github.com/i-vishi/crowdsourcing-blockchain/raw/main/snapshots/home.png",
-    },
-    {
-      repoName: "movie-data-android-app",
-      projName: "Movie Data App",
-      projImage:
-        "https://github.com/i-vishi/movie-data-android-app/raw/master/snapshots/home.png",
-    },
-    {
-      repoName: "csgo-league-admin",
-      projName: "CS:GO League Auction App",
-      projImage:
-        "https://github.com/i-vishi/csgo-league-admin/raw/master/snapshots/home.png",
-    }
-    // {
-    //   repoName: "knowmyprof",
-    //   projName: "Know My Professor",
-    //   projImage:
-    //     "https://github.com/i-vishi/knowmyprof/raw/master/snapshots/home.png",
-    // },
-  ];
-
   return (
-    <Container id="projects" className={classes.container}>
+    <Container
+      id="projects"
+      sx={{ pt: { xs: 16, md: 36 }, pl: 4, pr: 4 }}
+    >
       <ComponentHeading title="Some Projects I've Built" />
       <Grid
         container
-        className={classes.proGrids}
+        sx={{ pt: 8 }}
         spacing={4}
-        justify="space-around"
+        justifyContent="space-around"
         alignItems="center"
       >
-        {repoList &&
-          repoList.map((repo, i) => {
-            return (
-              <Grid item key={`card-repo-${i}`}>
-                <ProjectCard
-                  repoName={repo.repoName}
-                  projName={repo.projName}
-                  projImage={repo.projImage}
-                />
-              </Grid>
-            );
-          })}
+        {repoList.map((repo, i) => (
+          <Grid item key={`card-repo-${i}`}>
+            <ProjectCard
+              repoName={repo.repoName}
+              projName={repo.projName}
+              projImage={repo.projImage}
+            />
+          </Grid>
+        ))}
       </Grid>
     </Container>
   );

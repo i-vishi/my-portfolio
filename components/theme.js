@@ -1,8 +1,7 @@
-import { createMuiTheme } from "@material-ui/core/styles";
-import { red } from "@material-ui/core/colors";
+import { createTheme } from "@mui/material/styles";
+import { red } from "@mui/material/colors";
 
-// Create a theme instance.
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: "#002438",
@@ -26,14 +25,14 @@ const theme = createMuiTheme({
     fontSize: 16,
     fontFamily: "Oxygen, Roboto, Helvetica, Arial, sans-serif",
   },
-  overrides: {
+  components: {
     MuiCssBaseline: {
-      "@global": {
+      styleOverrides: {
         "*::-webkit-scrollbar": {
           width: "0.4em",
         },
         "*::-webkit-scrollbar-track": {
-          "-webkit-box-shadow": "inset 0 0 6px rgba(0,0,0,0.00)",
+          WebkitBoxShadow: "inset 0 0 6px rgba(0,0,0,0.00)",
         },
         "*::-webkit-scrollbar-thumb": {
           backgroundColor: "rgba(0,245,255,0.5)",
