@@ -1,27 +1,59 @@
-<div align="center">
-  <img alt="Logo" src="public/logo-vg.png" width="100" />
-</div>
-<h1 align="center">
-  my-portfolio
-</h1>
-<p align="center">
-  This is my portfolio website built with <a href="https://nextjs.org/" target="_blank">Next.js</a> and hosted with <a href="https://vercel.com/" target="_blank">Vercel</a>
-</p>
+# Vishal Gaur — Portfolio
 
-![demo](snapshots/portfolio-snapshot.png)
+Personal portfolio site. Built with Next.js 14, TypeScript, and Tailwind. Designed as an editorial "build log" — refined typography, monospace accents, asymmetric grid.
 
-## :hammer_and_wrench: Project setup
+## Stack
 
-```
-npm install
-```
+- **Next.js 14** (App Router, RSC by default — zero client JS on most routes)
+- **TypeScript**
+- **Tailwind CSS** with a custom paper/ink palette
+- **Fraunces** (display), **Geist** (sans), **JetBrains Mono** (code) — loaded via `next/font`
 
-### Run the development server:
+## Design tokens
+
+| Token | Value | Use |
+| --- | --- | --- |
+| `paper` | `#F4F1EC` | Page background |
+| `ink` | `#1A1815` | Primary text |
+| `ink-2` | `#3A352D` | Body text |
+| `muted` | `#7A7163` | Secondary text |
+| `rule` | `#D9D2C5` | Borders & dividers |
+| `accent` | `#B85C20` | Single accent (links, current role marker) |
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
+# → http://localhost:3000
 ```
 
-<p align="center"> Made with ❤️ by <a href="https://github.com/i-vishi">me</a></p>
+## Edit content
+
+All copy lives in **`lib/content.ts`** — single source of truth. Update:
+
+- `profile` — name, title, links, hero intro
+- `domains` — the three "What I work on" cards
+- `roles` — experience timeline + case studies (auto-generates `/work/[slug]` pages)
+- `projects` — the projects grid
+- `notes` — writing/blog (currently empty, hides the section)
+
+Adding a new role to `roles[]` automatically:
+1. Adds it to the homepage timeline
+2. Generates a static case-study page at `/work/[slug]`
+3. Wires up prev/next navigation
+
+## Deploy
+
+Push to GitHub and import to Vercel — zero config. The `images.remotePatterns` in `next.config.js` already allow GitHub-hosted screenshots if you want to embed them.
+
+## Content TODO
+
+- [ ] Replace `public/Resume_Vishal_Gaur.pdf` with the updated resume
+- [ ] Add Shipsy bullets that reflect actual shipped work (offline sync, GPS tuning, KMP modules)
+- [ ] Write 2 short posts to populate the `notes` section (Compose gotcha + KMP setup)
+- [ ] Add a screenshot or device mockup to the hero (optional)
+
+## Why this design
+
+See the design rationale in the chat thread — short version: editorial layout signals seniority better than a gradient hero, and the single-source-of-truth content file makes the site cheap to maintain across job changes.

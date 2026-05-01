@@ -1,17 +1,53 @@
-/*
-  Critical styles applied before any JS runs.
-  These prevent FOUC (flash of unstyled content) during hydration.
-*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Match the theme's background so there's no white flash before CssBaseline loads */
-html,
-body {
-  background-color: #002438;
-  margin: 0;
-  padding: 0;
+:root {
+  --grid-line: rgba(26, 24, 21, 0.06);
 }
 
-/* Prevent images from ever expanding beyond their container during hydration */
-img {
-  max-width: 100%;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F4F1EC;
+  color: #1A1815;
+  font-feature-settings: 'ss01', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #1A1815;
+  color: #F4F1EC;
+}
+
+/* Subtle ruled-paper texture, only on the page bg */
+.paper-bg {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-position: -1px -1px;
+}
+
+/* Inline link style for prose */
+.prose-link {
+  position: relative;
+  color: #1A1815;
+  text-decoration: none;
+  border-bottom: 1px solid #B85C20;
+  transition: background-color 150ms ease;
+}
+.prose-link:hover {
+  background-color: rgba(184, 92, 32, 0.08);
+}
+
+/* Marker before section labels */
+.section-label::before {
+  content: '§';
+  margin-right: 0.5em;
+  color: #B85C20;
+  font-weight: 400;
 }
