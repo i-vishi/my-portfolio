@@ -85,7 +85,7 @@ export const roles: Role[] = [
     slug: 'testbook',
     company: 'Testbook',
     role: 'SDE-2 · Android',
-    period: '2022 — 2024',
+    period: 'Jun 2022 — Jul 2024',
     current: false,
     blurb:
       'EdTech platform serving 5M+ learners. Led Compose adoption and shipped revenue-driving features end to end.',

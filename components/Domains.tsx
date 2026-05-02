@@ -10,23 +10,28 @@ export function Domains() {
         {domains.map((d, i) => (
           <article
             key={d.id}
-            className="bg-paper p-8 flex flex-col"
+            className="bg-paper p-8 flex flex-col group hover:bg-paper-2 transition-colors duration-200"
           >
-            <div className="flex items-baseline justify-between mb-4">
-              <span className="font-mono text-xs text-muted">
+            <div className="flex items-baseline justify-between mb-5">
+              <span className="font-mono text-[11px] text-muted tracking-wider">
                 {String(i + 1).padStart(2, '0')}
               </span>
-              <span className="w-6 h-px bg-accent" />
+              <span className="w-5 h-px bg-rule group-hover:bg-accent transition-colors duration-200" />
             </div>
             <h3 className="font-display text-xl tracking-tightest mb-3 text-ink">
               {d.title}
             </h3>
             <p className="text-sm leading-relaxed text-ink-2 mb-6 flex-1">{d.blurb}</p>
-            <ul className="font-mono text-[11px] text-muted flex flex-wrap gap-x-3 gap-y-1.5">
+            <div className="flex flex-wrap gap-1.5">
               {d.tags.map((t) => (
-                <li key={t}>· {t}</li>
+                <span
+                  key={t}
+                  className="font-mono text-[10px] text-muted border border-rule px-2 py-0.5"
+                >
+                  {t}
+                </span>
               ))}
-            </ul>
+            </div>
           </article>
         ))}
       </div>
